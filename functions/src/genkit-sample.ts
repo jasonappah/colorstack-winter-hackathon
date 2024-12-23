@@ -14,6 +14,10 @@ import {onFlow} from "@genkit-ai/firebase/functions";
 import {defineSecret} from "firebase-functions/params";
 const googleAIapiKey = defineSecret("GOOGLE_GENAI_API_KEY");
 
+import {enableFirebaseTelemetry} from "@genkit-ai/firebase";
+
+enableFirebaseTelemetry();
+
 const ai = genkit({
   plugins: [
     // Load the Google AI plugin. You can optionally specify your API key
