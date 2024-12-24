@@ -1,14 +1,14 @@
 import { initializeApp } from 'firebase/app';
-
+import Constants from "expo-constants";
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyDlOcFaEGUe_zoAuPDU9aSCqlAArWYJuaI",
-  authDomain: "colorstack-winter-hackathon.firebaseapp.com",
-  projectId: "colorstack-winter-hackathon",
-  storageBucket: "colorstack-winter-hackathon.firebasestorage.app",
-  messagingSenderId: "1021384794993",
-  appId: "1:1021384794993:web:b2c9dd4ac90fa435deccd0"
+  apiKey: Constants.expoConfig?.extra?.apiKey,
+  authDomain: Constants.expoConfig?.extra?.authDomain,
+  projectId: Constants.expoConfig?.extra?.projectId,
+  storageBucket: Constants.expoConfig?.extra?.storageBucket,
+  messagingSenderId: Constants.expoConfig?.extra?.messagingSenderId,
+  appId: Constants.expoConfig?.extra?.appId,
 };
 
 const app = initializeApp(firebaseConfig);
